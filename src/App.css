@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+h1{
+  font-size: 50px;
+}
+
+.under-construction{
+  color: red;
+  text-align: center;
+  font-size: large;
+  padding-top: 1em;
+}
+
+.confirmed-booking{
+  color: #495e57;
+  text-align: center;
+  font-size: x-large;
+  padding-top: 1em;
+  font-weight: bold;
+}
+
+.hidden{
+  display: none !important;
+}
+
+/*Used to lock the footer at the bottom of the page*/
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content{
+  flex: 1;
+}
+
+
+/*Header------------------------------------------------------------------------------------------------------------------------------------*/
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+  .header img {
+      display: flex;
+      align-items: center;
+      width: 17em;
+      align-self: center;
+      grid-column: 3/4;
+  }
+
+/*Navigation--------------------------------------------------------------------------------------------------------------------------------*/
+
+.navbar {
+  display: flex;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+  .navbar a {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 10px 0;
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+      font-size: 25px;
+      border-radius: 2vw;
+      
+  }
+
+    .navbar a:hover, .footer a:hover {
+      font-weight: bold;
+      color: black;
+      background-color: #F4CE14;
+    }
+
+    .navbar a.active{
+      color: #F4CE14;
+      background-color: black;
+      font-weight: bold;
+    }
+    
+
+/*Footer------------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer {
+  background-color: #fff;
+  padding: 1.5em 0;
+  width: 100%;
+  bottom: 0;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  padding-bottom: 5px;
+  color: black;
+}
+
+.footer h2{
+  align-items: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+  .footer img {
+      height: 100%;
+      width: 70px;
+      align-content: center;
+      align-self: center;
+      grid-column: 2/3
+  }
+
+  .footer div {
+      text-align: center;
+      font-weight: 500;
+      padding-bottom: 0.25em;
+  }
+
+  .footer a {
+      color: black;
+      font-size: 20px;
+      text-decoration: none;
+  }
+
+
+  /*Hero------------------------------------------------------------------------------------------------------------------------------------*/
+
+.hero{
+  background-color: #495E57;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.heroText{
+  grid-column: 2/3;
+  color: #FBDABB;
+  padding-top: 2em
+}
+
+.heroText h1{
+  color: #F4CE14;
+  padding-bottom: 0.25em;
+}
+
+.heroText h3{
+  font-size: 30px;
+  padding-bottom: 0.25em;
+}
+
+.heroText p{
+  padding-bottom: 0.25em;
+}
+
+/*LinkButton------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.link-button{
+  margin-top: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F4CE14;
+  width: 15em;
+  height: 3em;
+  border-radius: 100px;
+  font-size: large;
+  border: 1px solid black;
+}
+
+.link-button:hover{
+  background-color: #ee9972;
+}
+
+.link-button:active{
+  background-color: #FBDABB ;
+}
+
+.heroImage{
+  display: flex;
+  grid-column: 3/4;
+  align-items: end;
+  justify-content: end;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+  .hero img{
+    width: 50%;
+    border-radius: 20px;
+  }
+
+
+/*Specials---------------------------------------------------------------------------------------------------------------------------------*/
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title-and-button-container{
+  display: grid;
+  grid-template-columns: 1.3fr 2fr 1fr 1fr;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.title-and-button-container h1{
+  grid-column: 2/3;
+  margin-top: 0.2em;
+}
+
+.title-and-button-container .link-button{
+  grid-column: 3/4;
+  text-align: center;
+  margin-left: 0em;
+}
+
+
+
+/*Card-------------------------------------------------------------------------------------------------------------------------------------*/
+
+  .card{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 1vw;
+    background-color: #edefee;
+    box-shadow:  0px 5px 4px darkgray;
+    width: 18%;
+  }
+
+  .card img{
+    width:  100%;
+    height: 10vw;
+    object-fit: fill;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+  }
+
+  .card h3{
+    font-size: x-large;
+  }
+
+  .card p{
+    padding-bottom: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+  .card h3, .card p{
+    padding-top: 0.5vw;
+  }
+
+  /*Reviews--------------------------------------------------------------------------------------------------------------------------------*/
+  .reviewTitle{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .reviews-container{
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+
+  /*ReviewCard--------------------------------------------------------------------------------------------------------------------------------*/
+
+
+  .reviewCard{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2em;
+    border-radius: 1vw;
+    background-color: #495e57;
+    color: #F4CE14;
+    box-shadow:  0px 5px 4px darkgray;
+    width: 15em;
+  }
+
+  .reviewCard h3{
+    font-size: x-large;
+  }
+
+  .reviewCard p{
+    padding-bottom: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+  .reviewCard h3, .reviewCard p{
+    padding-top: 0.5vw;
+  }
+
+
+  /*BookingTableForm--------------------------------------------------------------------------------------------------------------------------*/
+
+
+  .table-form {
+    width: 20em;
+    align-self: center;
+    margin-top: 2em;
+    padding: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 0.5em;
+    background-color: #edefee;
+  }
+  
+  .table-form label {
+    display: block;
+    margin-top: 1.5em;
+    font-weight: bold;
+  }
+  
+  .table-form input,
+  .table-form select {
+    width: 100%;
+    padding: 1em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    font-size: large;
+  }
+
+  .submit-button{
+    margin-top: 2em !important;
+  }
+
+  .error-message{
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 1em;
+    color: red;
+    font-weight: bold;
+  }
