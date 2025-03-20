@@ -11,7 +11,7 @@ function LinkButton({to, buttonText}) {
 
     return (
 
-        <button onClick={handleButtonClick} className='link-button'>{buttonText}</button>
+        <button aria-label= {buttonText} onClick={handleButtonClick} className='link-button'>{buttonText}</button>
     );
   }
 

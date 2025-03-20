@@ -18,13 +18,6 @@ function Body() {
         localStorage.setItem('bookedTimes', JSON.stringify(bookedTimes));
     },[bookedTimes])
 
-    // Fetch available times from the API on the initial render
-    useEffect(() =>{
-        const todayDate = new Date();
-        const times = fetchAPI(todayDate);
-        dispatch({type: "initial_times", payload: times})
-    },[])
-
     // Updates the times based on the selected date
     const updateTimes = (state, action) => {
         if (action.type === "update_times") {
@@ -47,6 +40,10 @@ function Body() {
 
         else if (action.type === "initial_times") {
             return action.payload;
+        }
+
+        else if (action.type === "reset_times") {
+            return [];
         }
     }
 
@@ -88,7 +85,6 @@ function Body() {
         setBookedTimes({});
         localStorage.removeItem('bookedTimes');
     };
-
 
     const [availableTimes, dispatch] = useReducer(updateTimes, initiialTimes())
 

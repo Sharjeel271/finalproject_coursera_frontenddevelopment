@@ -3,11 +3,11 @@ import React, {Component} from "react";
 import Body from "./Body";
 import { MemoryRouter } from "react-router-dom";
 
-
-test('Render the times', () =>{
+// Done this way to present the user to select a time before the date
+test('Check the initial render of times list has no times', () =>{
 
     const expectedTimes = [
-        'Select a time', '17:00','17:30','18:30','19:30','20:30','21:00','22:00','23:00',
+        'Select a time'
     ];
 
     render(

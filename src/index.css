@@ -3,10 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
-/*.container{
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-auto-rows: minmax(200px, auto);
-}*/

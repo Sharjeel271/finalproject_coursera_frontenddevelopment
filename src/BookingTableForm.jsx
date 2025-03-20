@@ -19,6 +19,7 @@ function BookingTableForm({availableTimes, reducerDispatch, submitForm}) {
         if (selectedDate < currentDate) {
             setIsDateErrorVisible(true)
             setDate('');
+            reducerDispatch({type: 'reset_times', payload: selectedDate})
         }
         
         else {
@@ -67,14 +68,14 @@ function BookingTableForm({availableTimes, reducerDispatch, submitForm}) {
         <>
             <form className="table-form" onSubmit={handleSubmit}>
                 <label for='booking-date'>Choose a date</label>
-                <input type='date' id='booking-date' onChange={handleDateChange} value={date}/>
+                <input className={isDateErrorVisible ? 'invalid-border' : ''} aria-label='Choose a date' type='date' id='booking-date' onChange={handleDateChange} value={date} required/>
                 {isDateErrorVisible && (
                     <p className="error-message">Invalid date selection. Please select a date in the future</p>
                     )
                 }
 
                 <label for='booking-time'>Choose a time</label>
-                <select id='booking-time' onChange={handleTimeChange} value={time}>
+                <select aria-label='Choose a time' id='booking-time' onChange={handleTimeChange} value={time} required >
                     <option value=''>Select a time</option>
                     {availableTimes.map(time =>
                        <option key={time}>{time}</option> 
@@ -82,8 +83,8 @@ function BookingTableForm({availableTimes, reducerDispatch, submitForm}) {
                 </select>
 
                 <label for='booking-guests'>Number of guests</label>
-                <input type='number' id='booking-guests' onChange={handleGuestsChange} value={guests} min={minGuests} max={maxGuests}/>
-                <input type='submit' className="link-button submit-button" value='Make Reservation'/>
+                <input aria-label='Number of guests' type='number' id='booking-guests' onChange={handleGuestsChange} value={guests} min={minGuests} max={maxGuests}/>
+                <input aria-label='submit form' type='submit' className="link-button submit-button" value='Make Reservation' disabled={date == '' || time == ''}/>
             </form>
         </>
     )
